@@ -26,5 +26,16 @@ public class MemberServiceImpl implements MemberService {
 		
 		return memberList;
 	}
+	
+	@Override
+	public int sumOf(int x, int y) {
+		
+		int sum = 0;
+		for (int i = x; x <= y; x++) {
+			sum += x;
+		}
+		
+		return sum;
+	}
 
 }
