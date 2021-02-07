@@ -6,6 +6,15 @@ import Entity.Member;
 
 public class MemberServiceImpl implements MemberService {
 
+	private static MemberServiceImpl singleton = new MemberServiceImpl();
+	private MemberServiceImpl() {
+		//
+	}
+	// インスタンスの取得
+	public static MemberServiceImpl getInstance() {
+		return singleton;
+	}
+	
 	@Override
 	public String greet(int i) {
 		
